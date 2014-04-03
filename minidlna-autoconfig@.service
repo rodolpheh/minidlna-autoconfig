@@ -1,0 +1,11 @@
+[Unit]
+Description=On-demand miniDLNA config creator for %i
+Before=minidlna@.service
+
+[Service]
+User=%i
+Type=oneshot
+ExecStart=/usr/share/minidlna-autoconfig/minidlna-autoconfig.sh
+
+[Install]
+WantedBy=multi-user.target

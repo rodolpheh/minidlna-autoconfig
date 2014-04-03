@@ -1,0 +1,9 @@
+[Unit]
+Description=Minidlna server as %i
+
+[Service]
+User=%i
+ExecStart=/usr/bin/minidlnad -f /home/%i/.config/minidlna/minidlna.conf -d
+
+[Install]
+WantedBy=multi-user.target
