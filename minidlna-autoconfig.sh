@@ -86,7 +86,7 @@ elif [[ -n "$cachePath" ]]; then
     if mkdir -p "$cachePath"; then
         logger "Cache directory ${cachePath} created successfully"
     else
-        logger "Failed to create chache directory ${cachePath}"
+        logger "Failed to create cache directory ${cachePath}"
         exit 3
     fi
 fi
@@ -100,7 +100,49 @@ elif [[ -n "$logPath" ]]; then
     if mkdir -p "$logPath"; then
         logger "Log directory ${logPath} created successfully"
     else
-        logger "Failed to create chache directory ${logPath}"
+        logger "Failed to create log directory ${logPath}"
+        exit 3
+    fi
+fi
+
+# Create Music directory if necessary
+MusicPath=$(grep -E 'media_dir\s*=A,' $configPath | cut -d : -f 2-)
+if [[ -d "$MusicPath" ]]; then
+    logger "Music directory ${MusicPath} already exists"
+elif [[ -n "$MusicPath" ]]; then
+    logger "Music directory ${MusicPath} does not exist - will create it"
+    if mkdir -p "$MusicPath"; then
+        logger "Music directory ${MusicPath} created successfully"
+    else
+        logger "Failed to create music directory ${MusicPath}"
+        exit 3
+    fi
+fi
+
+# Create Pictures directory if necessary
+PicturesPath=$(grep -E 'media_dir\s*=P,' $configPath | cut -d : -f 2-)
+if [[ -d "$PicturesPath" ]]; then
+    logger "Pictures directory ${PicturesPath} already exists"
+elif [[ -n "$PicturesPath" ]]; then
+    logger "Pictures directory ${PicturesPath} does not exist - will create it"
+    if mkdir -p "$PicturesPath"; then
+        logger "Pictures directory ${PicturesPath} created successfully"
+    else
+        logger "Failed to create pictures directory ${PicturesPath}"
+        exit 3
+    fi
+fi
+
+# Create Videos directory if necessary
+VideosPath=$(grep -E 'media_dir\s*=V,' $configPath | cut -d : -f 2-)
+if [[ -d "$VideosPath" ]]; then
+    logger "Videos directory ${VideosPath} already exists"
+elif [[ -n "$logPath" ]]; then
+    logger "Videos directory ${VideosPath} does not exist - will create it"
+    if mkdir -p "$VideosPath"; then
+        logger "Videos directory ${VideosPath} created successfully"
+    else
+        logger "Failed to create videos directory ${VideosPath}"
         exit 3
     fi
 fi
