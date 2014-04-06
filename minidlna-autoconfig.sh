@@ -78,7 +78,7 @@ else
 fi
 
 # Create cache directory if necessary
-cachePath=$(grep -E 'db_dir\s*=' $configPath | cut -d : -f 2-)
+cachePath=$(grep -E 'db_dir\s*=' $configPath | cut -d = -f 2-)
 if [[ -d "$cachePath" ]]; then
     logger "Cache directory ${cachePath} already exists"
 elif [[ -n "$cachePath" ]]; then
@@ -92,7 +92,7 @@ elif [[ -n "$cachePath" ]]; then
 fi
 
 # Create log directory if necessary
-logPath=$(grep -E 'log_dir\s*=' $configPath | cut -d : -f 2-)
+logPath=$(grep -E 'log_dir\s*=' $configPath | cut -d = -f 2-)
 if [[ -d "$logPath" ]]; then
     logger "Log directory ${logPath} already exists"
 elif [[ -n "$logPath" ]]; then
