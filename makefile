@@ -8,4 +8,10 @@ install:
 	install -D -m 755 minidlna-makeconfig.sh "${DESTDIR}/usr/share/${PKGNAME}/minidlna-makeconfig.sh"
 	install -D -m 644 minidlna-autoconfig@.service "${DESTDIR}/usr/lib/systemd/system/minidlna-autoconfig@.service"
 	install -D -m 644 minidlna@.service "${DESTDIR}/usr/lib/systemd/system/minidlna@.service"
-	install -D -m 755 minidlna-autoconfig.sh "${DESTDIR}/usr/share/${PKGNAME}/minidlna-autoconfig.sh" 
+	install -D -m 755 minidlna-autoconfig.sh "${DESTDIR}/usr/share/${PKGNAME}/minidlna-autoconfig.sh"
+	
+remove:
+	rm -f "${DESTDIR}/usr/share/${PKGNAME}/minidlna-makeconfig.sh"
+	rm -f "${DESTDIR}/usr/lib/systemd/system/minidlna-autoconfig@.service"
+	rm -f "${DESTDIR}/usr/lib/systemd/system/minidlna@.service"
+	rm -f "${DESTDIR}/usr/share/${PKGNAME}/minidlna-autoconfig.sh"
