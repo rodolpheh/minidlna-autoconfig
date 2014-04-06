@@ -106,7 +106,7 @@ elif [[ -n "$logPath" ]]; then
 fi
 
 # Create Music directory if necessary
-MusicPath=$(grep -E 'media_dir\s*=A,' $configPath | cut -d : -f 2-)
+MusicPath=$(grep -E 'media_dir\s*=A,' $configPath | cut -d , -f 2-)
 if [[ -d "$MusicPath" ]]; then
     logger "Music directory ${MusicPath} already exists"
 elif [[ -n "$MusicPath" ]]; then
@@ -120,7 +120,7 @@ elif [[ -n "$MusicPath" ]]; then
 fi
 
 # Create Pictures directory if necessary
-PicturesPath=$(grep -E 'media_dir\s*=P,' $configPath | cut -d : -f 2-)
+PicturesPath=$(grep -E 'media_dir\s*=P,' $configPath | cut -d , -f 2-)
 if [[ -d "$PicturesPath" ]]; then
     logger "Pictures directory ${PicturesPath} already exists"
 elif [[ -n "$PicturesPath" ]]; then
@@ -134,7 +134,7 @@ elif [[ -n "$PicturesPath" ]]; then
 fi
 
 # Create Videos directory if necessary
-VideosPath=$(grep -E 'media_dir\s*=V,' $configPath | cut -d : -f 2-)
+VideosPath=$(grep -E 'media_dir\s*=V,' $configPath | cut -d , -f 2-)
 if [[ -d "$VideosPath" ]]; then
     logger "Videos directory ${VideosPath} already exists"
 elif [[ -n "$logPath" ]]; then
