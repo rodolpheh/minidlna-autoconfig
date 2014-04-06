@@ -65,7 +65,7 @@ else
     logger "File $configPath does not exist - will create config file at this location"
 
     if mkdir -p $(dirname $configPath); then
-        if /usr/bin/bash /usr/share/minidlna/minidlna-makeconfig.sh > $configPath; then
+        if /usr/bin/bash /usr/share/minidlna-autoconfig/minidlna-makeconfig.sh > $configPath; then
             logger "Config file successfully created at $configPath!"
         else
             logger "Could not create config at $configPath - exiting"
