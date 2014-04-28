@@ -1,18 +1,17 @@
 #!/bin/bash
 # This file is part of minidlna-autoconfig.
 #
-# minidlna-autoconfig is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License as published by the Free
-# Software Foundation, either version 3 of the License, or (at your option) any
-# later version.
+# SHARE YOUR PROFITS LICENSE (Revision 1):
+# <houdas.rodolphe@gmail.com> and <pailleux.pierre@gmail.com> wrote this file.
+# You are free to use this software, look into its code, modify it to fit your
+# own needs and redistribute it. In order to commercialise it, you must give 50%
+# of the profits to charities. The charities choice will be made by voters on
+# Internet and the charities will receive the benefits proportionally to their
+# votes quantity. If you're willing to do so, please contact us.
+# Rodolphe HOUDAS and Pierre PAILLEUX.
 #
-# minidlna-autoconfig is distributed in the hope that it will be useful, but
-# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-# details.
-#
-# You should have received a copy of the GNU General Public License along with
-# minidlna-autoconfig.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the Share Your Profits License along with
+# minidlna-autoconfig. If not, see above.
 #
 # =======================================
 #
